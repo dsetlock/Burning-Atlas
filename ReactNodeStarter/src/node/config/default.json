@@ -1,0 +1,10 @@
+{
+    "database": {
+        "connectionString": "",
+        "databaseName": "ReactNodeStarter"
+    },
+    "observability": {
+        "connectionString": "",
+        "roleName": "API"
+    }
+}
