@@ -3,7 +3,9 @@ import { SeverityLevel, TraceTelemetry } from "applicationinsights/out/Declarati
 import Transport, { TransportStreamOptions } from "winston-transport";
 import { LogEntry } from "winston";
 import { LogLevel } from "./observability";
-
+/**
+ * A Winston transport that sends logs to Azure Application Insights.
+ */
 export interface ApplicationInsightsTransportOptions extends TransportStreamOptions {
     client: TelemetryClient
     handleRejections?: boolean;

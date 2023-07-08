@@ -2,7 +2,11 @@ import React, { FC, ReactElement, useEffect, ComponentType, ComponentClass, Prop
 import { TelemetryProvider } from './telemetryContext';
 import { reactPlugin, getApplicationInsights } from '../services/telemetryService';
 import { withAITracking } from '@microsoft/applicationinsights-react-js';
-
+/**
+ * Provides a context for telemetry tracking using Application Insights.
+ * @param props The component props.
+ * @returns The rendered Telemetry component.
+ */
 type TelemetryProps = PropsWithChildren<unknown>;
 
 const Telemetry: FC<TelemetryProps> = (props: TelemetryProps): ReactElement => {

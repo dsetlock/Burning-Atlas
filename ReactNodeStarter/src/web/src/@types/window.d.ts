@@ -8,3 +8,9 @@ declare global {
         }
     }
 }
+/**
+ * This file declares a global interface for the Window object, adding a custom property to it.
+ * The custom property is an object called ENV_CONFIG, which contains two properties:
+ * - REACT_APP_API_BASE_URL: a string representing the base URL for the API.
+ * - REACT_APP_APPLICATIONINSIGHTS_CONNECTION_STRING: a string representing the connection string for Application Insights.
+ */

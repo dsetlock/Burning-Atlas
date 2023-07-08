@@ -1,7 +1,10 @@
 import mongoose from "mongoose";
 import { DatabaseConfig } from "../config/appConfig";
 import { logger } from "../config/observability";
-
+/**
+ * This module exports a function that configures Mongoose with the provided database configuration.
+ * @param config The database configuration object.
+ */
 export const configureMongoose = async (config: DatabaseConfig) => {
     mongoose.set("toJSON", {
         virtuals: true,

@@ -2,7 +2,11 @@ import * as applicationInsights from "applicationinsights";
 import { ObservabilityConfig } from "./appConfig";
 import winston from "winston";
 import { ApplicationInsightsTransport } from "./applicationInsightsTransport";
-
+/**
+ * This file contains the configuration for observability in the application. It sets up logging with Winston and
+ * Application Insights, and exports an `observability` function that can be called to configure the logger and
+ * Application Insights with the provided configuration.
+ */
 export enum LogLevel {
     Error = "error",
     Warning = "warn",

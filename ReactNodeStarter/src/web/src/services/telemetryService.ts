@@ -4,10 +4,22 @@ import { DistributedTracingModes } from "@microsoft/applicationinsights-common";
 import { createBrowserHistory } from 'history'
 import config from "../config";
 
+/**
+ * ReactPlugin instance for Application Insights
+ */
 const plugin = new ReactPlugin();
+
+/**
+ * Application Insights instance
+ */
 let applicationInsights: ApplicationInsights;
+
 export const reactPlugin = plugin;
 
+/**
+ * Returns the Application Insights instance
+ * @returns Application Insights instance
+ */
 export const getApplicationInsights = (): ApplicationInsights => {
     const browserHistory = createBrowserHistory({ window: window });
     if (applicationInsights) {
@@ -45,6 +57,11 @@ export const getApplicationInsights = (): ApplicationInsights => {
     return applicationInsights;
 }
 
+/**
+ * Tracks an event in Application Insights
+ * @param eventName - The name of the event to track
+ * @param properties - Optional properties to include with the event
+ */
 export const trackEvent = (eventName: string, properties?: { [key: string]: unknown }): void => {
     if (!applicationInsights) {
         return;

@@ -1,6 +1,9 @@
 import { FontIcon, getTheme, IconButton, IIconProps, IStackStyles, mergeStyles, Persona, PersonaSize, Stack, Text } from '@fluentui/react';
 import React, { FC, ReactElement } from 'react';
-
+/**
+ * Renders the header component of the application.
+ * @returns A ReactElement containing the header component.
+ */
 const theme = getTheme();
 
 const logoStyles: IStackStyles = {

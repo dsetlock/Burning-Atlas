@@ -1,5 +1,11 @@
 import React, { FC, ReactElement } from 'react';
-
+/**
+ * Renders a sidebar with a list of items and an optional button to add new items.
+ * 
+ * @param items An optional array of objects representing the items to display in the sidebar.
+ * @param selectedItem An optional object representing the currently selected item.
+ * @param onItemCreate An optional function to handle the creation of new items.
+ */
 type SidebarProps = {
     items?: { name: string, url: string }[];
     selectedItem?: { name: string, url: string };

@@ -4,7 +4,11 @@ import { DefaultAzureCredential } from "@azure/identity";
 import { SecretClient } from "@azure/keyvault-secrets";
 import { logger } from "./observability";
 import { IConfig } from "config";
-
+/**
+ * This file exports a function that loads the application configuration from various sources, including environment variables and Azure Key Vault.
+ * The `getConfig` function returns a Promise that resolves to an `AppConfig` object containing the configuration values.
+ * The `populateEnvironmentFromKeyVault` function is an internal helper function that populates environment variables from Azure Key Vault secrets.
+ */
 export const getConfig: () => Promise<AppConfig> = async () => {
     // Load any ENV vars from local .env file
     if (process.env.NODE_ENV !== "production") {

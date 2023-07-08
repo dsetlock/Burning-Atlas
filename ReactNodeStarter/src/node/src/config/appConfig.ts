@@ -12,3 +12,6 @@ export interface AppConfig {
     observability: ObservabilityConfig
     database: DatabaseConfig
 }
+/**
+ * Defines the configuration for the application, including observability and database settings.
+ */
