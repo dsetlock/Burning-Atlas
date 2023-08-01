@@ -88,3 +88,11 @@ Run `npm start` to start the local development server
 
 Launch browser @ `http://localhost:3100`.
 (If using the container, you must map the port on run accordingly)
+
+### Use Containers
+
+Within the `node` and `web` directories there are associated Dockerfiles to containerize the front end and back end of the application. 
+
+### To use with Kubernetes
+
+Provided within the `node` and `web` directories, nested in the `manifests` folder are associated .yaml files for ingress, deploymnet, and service that can be applied to the cluster with necessary modifications for image name, image repository, etc.
